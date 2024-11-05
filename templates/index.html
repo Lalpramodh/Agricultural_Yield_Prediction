@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Agricultural Yield Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    h1 {
+      margin-top: 100px; 
+      text-align: center; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login">
+    <h1>Agricultural Yield Prediction</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+      <label for="Nitrogen">Nitrogen (0-150)</label>
+      <input type="number" name="Nitrogen" placeholder="Nitrogen" required="required" min="0" max="150" />
+      
+      <label for="Phosphorus">Phosphorus (0-150)</label>
+      <input type="number" name="Phosphorus" placeholder="Phosphorus" required="required" min="0" max="150" />
+      
+      <label for="Potassium">Potassium (0-200)</label>
+      <input type="number" name="Potassium" placeholder="Potassium" required="required" min="0" max="200" />
+      
+      <label for="temperature">Temperature (0-50°C)</label>
+      <input type="number" name="temperature" placeholder="temperature" required="required" min="0" max="50" />
+      
+      <label for="humidity">Humidity (0-100%)</label>
+      <input type="number" name="humidity" placeholder="humidity" required="required" min="0" max="100" />
+      
+      <label for="pH">pH (0-14)</label>
+      <input type="number" name="pH" placeholder="pH" required="required" min="0" max="14" />
+      
+      <label for="rainfall">Rainfall (0-300 mm)</label>
+      <input type="number" name="rainfall" placeholder="rainfall" required="required" min="0" max="300" />
+      
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br><br>
+    <h1 id="predi" style="margin-top: 50px;">{{ prediction_text }}</h1>
+  </div>
+</body>
+</html>

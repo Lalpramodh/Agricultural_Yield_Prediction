@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Agricultural Yield Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='myhome.css') }}">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Agriculture Yield Prediction</h1>
+      <p style="color: black;">
+        Welcome to our website! We hope you are doing well with your farm. We are here to provide suggestions about your crop cultivation.
+        We recommend which crop you should grow in your farm for better yields. It's very easy to predict which crop to grow based on your soil nutrients.
+        You just need to know your soil nutrients, which you can test in a lab.
+      </p>
+      <br>
+      <h3 style="color: black;">Let's Start a New Journey</h3>
+      <br>
+      <h2 style="color: black;">Click the button below for Crop Recommendation</h2>
+      <br>
+      <a href="{{ url_for('predict_page') }}">
+        <button type="button" id="Predict" name="Predict">Predict</button>
+      </a>
+    </main>
+  </body>
+</html>

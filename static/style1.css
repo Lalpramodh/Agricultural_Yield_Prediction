@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("image7.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 50px;
+    color: #ffffff;  /* Ensure text is visible on the image */
+}
+
+h1 {
+    color: #000000;  /* White text for better contrast on the image */
+    font-size: 2em;
+}
+
+a {
+    color: #ffffff;
+    background-color: rgba(20, 142, 151, 0.8); /* Semi-transparent background */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+a:hover {
+    background-color: rgba(69, 160, 73, 0.8);
+}
